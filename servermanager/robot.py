@@ -12,7 +12,7 @@ from servermanager.models import commands
 from .MemcacheStorage import MemcacheStorage
 
 robot = WeRoBot(token=os.environ.get('DJANGO_WEROBOT_TOKEN')
-                      or 'lylinux', enable_session=True)
+                or 'wifi365', enable_session=True)
 memstorage = MemcacheStorage()
 if memstorage.is_available:
     robot.config['SESSION_STORAGE'] = memstorage
